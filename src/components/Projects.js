@@ -1,21 +1,21 @@
 import React from 'react'
 
-function Projects(props) {
+function Projects({projects,projects1,projects2,projects3}) {
     return (
         <div className="project-container">
             <h1 className="project-title">My Projects</h1>
                 <div className="my-projects">
                     <div className="projects">
-                        <h1>{props.project}</h1>
+                        <h1>{projects.project}</h1>
                     </div>
                     <div className="projects">
-                        <h1>{props.project2}</h1>
+                        <h1>{projects1.project}</h1>
                     </div>
                     <div className="projects">
-                        <h1>{props.project3}</h1>
+                        <h1>{projects2.project}</h1>
                     </div>
                     <div className="projects">
-                        <h1>{props.project4}</h1>
+                        <h1>{projects3.project}</h1>
                     </div>
                 </div>
         </div>

@@ -3,18 +3,17 @@ import Navbar from './components/Navbar'
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import projects from './arrays/projects'
 function App() {
-
-
   return (
   <div className="App">
     <Navbar />
     <About />
     <Projects 
-      project="Project1"
-      project2="Project2"
-      project3="Project3"
-      project4="Project4"
+      projects={projects[0]}
+      projects1={projects[1]}
+      projects2={projects[2]}
+      projects3={projects[3]}
     />
     <Contact />
   </div>
