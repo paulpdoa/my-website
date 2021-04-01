@@ -10,7 +10,12 @@ function App() {
   <div className="App">
     <Navbar />
     <About />
-    <Projects />
+    <Projects 
+      project="Project1"
+      project2="Project2"
+      project3="Project3"
+      project4="Project4"
+    />
     <Contact />
   </div>
   );
