@@ -6,7 +6,7 @@
 body {
   font-family: 'Courier New', Courier, monospace;
   height:100vh;
-  background:url(https://www.teahub.io/photos/full/1-13031_animated-wallpaper-windows-10-live-wallpaper-gif.jpg);
+  background:url('./image/wallpaper.jpg');
   background-repeat: inherit;
   background-size: cover;
   color:white;
@@ -196,7 +196,7 @@ body {
   .navigation-buttons{
     display:flex;
     position:absolute;
-    width:100%;
+    margin-left:200px;
     justify-content: center;
   }
   .navbar-list{
@@ -204,21 +204,23 @@ body {
     background:#8a7f6f;
     border-radius:10px;
     height:250px;
-    width:100%;
+    width:100%; 
   }
   .navbar-list li{
     padding:15px 10px;
+    width:100%;
     margin-top:20px;
   }
   .navbar-list a{
     font-weight: 800;
+    border-bottom:1px solid black;
   }
   .navbar-list.show{
     position:absolute;
     text-align: center;
     display:flex;
     flex-direction:column;
-    width:400px;
+    width:350px;
     margin-top:36px;
   }
   .burger-menu-container{
@@ -227,6 +229,10 @@ body {
     width:20px;
   }
   /* end navbar */
+  /* about */
+  .my-photo{
+    width:200px;
+  }
   /* projects */
   .my-projects{
     display: flex;

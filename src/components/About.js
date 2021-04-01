@@ -11,19 +11,22 @@ function About() {
                         <Typewriter 
                         onInit={(typewriter) => {
                             typewriter
-                            .typeString("I am Paul de Ocampo Andres")
+                            .typeString("I am Paul D. Andres")
                             .pauseFor(1000)
-                            .deleteChars(21)
-                            .typeString("a 3rd year college student at Emilio Aguinaldo College-Manila.")
+                            .deleteChars(14)
+                            .typeString("a 3rd year college student")
                             .pauseFor(1000)
-                            .deleteChars(62)
-                            .typeString("studying Bachelor of Science in Information Technology")
+                            .deleteChars(24)
+                            .typeString("web developer")
                             .pauseFor(1000)
-                            .deleteChars(54)
+                            .deleteChars(15)
                             .typeString("knowledgeable in PHP")
                             .pauseFor(1000)
                             .deleteChars(3)
                             .typeString("Javascript")
+                            .pauseFor(1000)
+                            .deleteChars(10)
+                            .typeString("MySQL Database")
                             .pauseFor(1000)
                             .deleteAll()
                             .callFunction((typewriter) => {
