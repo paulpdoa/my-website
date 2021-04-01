@@ -1,13 +1,245 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Courier New', Courier, monospace;
+  height:100vh;
+  background:url(https://www.teahub.io/photos/full/1-13031_animated-wallpaper-windows-10-live-wallpaper-gif.jpg);
+  background-repeat: inherit;
+  background-size: cover;
+  color:white;
+  scroll-behavior: smooth;
+}
+/* Navbar */
+.navbar-container{
+  display:flex;
+  flex-direction: row;
+  background:#32292f;
+  padding:10px;
+}
+.navbar-title a,
+.navbar-title{
+  text-decoration: none;
+  padding:10px;
+  color:#f0f7f4;
+  transition:transform 250ms;
+}
+.navbar-title:hover{
+  transform: translateY(-10px);
+}
+.navigation-buttons{
+  align-self: center;
+  margin-left:auto;
+}
+.navbar-list li a{
+  text-align: center;
+  padding:20px;
+}
+.navbar-list li{
+  display:inline;
+  list-style: none;
+}
+.navbar-list a{
+  text-decoration: none;
+  color:#f0f7f4;
+  text-align: center;
+  font-size:large;
+  font-weight:700;
+  text-transform: uppercase;
+}
+.navbar-list li a:hover{
+    background-color: #70abaf;
+    border-radius:10px;
+    width:200px;
+    padding:20px;
+    transition:0.5s;
+}
+.burger-menu-container{
+  display:flex;
+  padding:20px;
+  border:1px solid rgb(66, 65, 65);
+  border-radius:5px;
+  justify-content:center;
+  cursor:pointer;
+  display:none;
+}
+.burger-menu{
+  align-self:center;
+  position:absolute;
+  width:30px;
+}
+/* end of navbar */
+/* start of about me */
+.about-container{
+  display:flex;
+  flex-direction: column;
+  margin-top:50px;
+}
+.about-title{
+  text-transform: uppercase;
+}
+.my-photo{
+  width:300px;
+  border-radius:500px;
+  transition:transform 250ms;
+}
+.meh{
+  margin-top:5px;
+  padding:10px;
+}
+.my-photo:hover{
+  transform: translateY(-10px);
+}
+.about-me,.about-title{
+  margin-top:20px;
+  text-align: center;
+  justify-content: center;
+}
+/* end of about me */
+/* start of my projects */
+.project-container{
+  margin-top:100px;
+}
+.project-title{
+  text-transform: uppercase;
+  text-align: center;
+}
+.my-projects{
+  display: flex;
+  justify-content: space-around;
+}
+.projects{
+  margin-top:20px;
+  background:rgb(77, 77, 77);
+  text-align: center;
+  padding:75px;
+  border-radius:10px;
+  transition:transform 250ms;
+  cursor: pointer;
+}
+.projects:hover{
+  transform: translateY(-10px);
+}
+/* end of projects */
+/* start of contact me */
+.contact-title{
+  text-transform: uppercase;
+  margin-top:50px;
+  margin-bottom:50px;
+  text-align:center;
+}
+.contact-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form{
+  align-self: center;
+  width:50%;
+  padding:50px;
+  border:1px solid white;
+  border-radius:10px;
+}
+.contact-input label{
+  font-weight: 700;
+}
+.contact-input,.contact-buttons{
+ text-align: center;
+}
+.contact-input .name,
+.contact-input .number{
+  padding:10px;
+  outline:none;
+  border-radius:5px;
+  border-style:none;
+  margin:10px;
+  width:75%;
+}
+.contact-input textarea{
+  width:100%;
+  height: 100px;
+  outline:none;
+  padding:10px;
+  border-radius:5px;
+  border-style:none;
+  margin:10px;
+}
+.contact-buttons input{
+  background:#32292f;
+  color:white;
+  text-transform: uppercase;
+  font-weight:400;
+  padding:10px;
+  margin:10px;
+  border-radius:10px;
+  border-style:none;
+  width:100px;
+  transition:0.5s;
+  cursor:pointer;
+}
+.contact-buttons input:hover{
+  background:lightcyan;
+  color:black;
+}
+@media only screen and (max-width:480px){
+  /* navbar */
+  .navbar-title{
+    font-size:14px;
+    padding:10px;
+  }
+  .navbar-container{
+    display:flex;
+    justify-content: space-between;
+  }
+  .navigation-buttons{
+    display:flex;
+    position:absolute;
+    width:100%;
+    justify-content: center;
+  }
+  .navbar-list{
+    display:none;
+    background:#8a7f6f;
+    border-radius:10px;
+    height:250px;
+    width:100%;
+  }
+  .navbar-list li{
+    padding:15px 10px;
+    margin-top:20px;
+  }
+  .navbar-list a{
+    font-weight: 800;
+  }
+  .navbar-list.show{
+    position:absolute;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    width:400px;
+    margin-top:36px;
+  }
+  .burger-menu-container{
+    display:flex;
+    align-self: center;
+    width:20px;
+  }
+  /* end navbar */
+  /* projects */
+  .my-projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .projects{
+    width:400px;
+    align-self: center;
+  }
+  /* end of projects */
+  /* start of contacts */
+  .contact-form{
+    width:90%;
+  }
 }
